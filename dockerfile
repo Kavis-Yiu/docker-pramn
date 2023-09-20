@@ -20,8 +20,12 @@ RUN apk update && apk upgrade && apk add --update --no-cache \
 	php82-xml
 
 # using customised configurations
-#COPY ./httpd.conf /etc/apache2
-#COPY ./php.ini /etc/php82
+#COPY ./httpd.conf /etc/apache2/httpd.conf
+#COPY ./php.ini /etc/php82/php.ini
+
+# volumne mount
+VOLUME /var/www/localhost/htdocs
+VOLUME /var/log/apache2
 
 # Open port for httpd access
 EXPOSE 80
