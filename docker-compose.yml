@@ -52,7 +52,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root-password
       MYSQL_USER: player
-      MYSQL_PASSWORD: password
+      MYSQL_PASSWORD: player-password
       MYSQL_DATABASE: playground
 
   redis_cache:
